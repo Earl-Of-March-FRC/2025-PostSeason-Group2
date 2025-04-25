@@ -2,13 +2,16 @@
 package frc.robot.commands;
 
 import frc.robot.subsystems.DrivetrainSubsystem;
+
+import java.util.function.DoubleSupplier;
+
 import edu.wpi.first.wpilibj2.command.Command;
 
 public class DriveCMD extends Command {
 
   private final DrivetrainSubsystem driveSub;
 
-  public DriveCMD(DrivetrainSubsystem driveSub) {
+  public DriveCMD(DrivetrainSubsystem driveSub, DoubleSupplier xSpeed, DoubleSupplier ySpeed) {
     this.driveSub = driveSub;
     addRequirements(driveSub);
   }
@@ -20,7 +23,7 @@ public class DriveCMD extends Command {
 
   @Override
   public void execute() {
-
+    
   }
 
   @Override
