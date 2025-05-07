@@ -18,6 +18,7 @@ public class RobotContainer {
   DrivetrainSubsystem driveSub = new DrivetrainSubsystem();
 
   public RobotContainer() {
+    driveSub.setDefaultCommand(new DriveCMD(driveSub, () -> controller.getLeftX(), () -> controller.getLeftY(), () -> controller.getRightX()));
     
     configureBindings();
   }
